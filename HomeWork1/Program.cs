@@ -33,3 +33,34 @@ Console.ReadKey();
 
 
 //2. Grade Calculator
+
+Console.WriteLine("Grade Calculator");
+Console.WriteLine("----------------");
+Console.Write("Enter your score (0-100): ");
+int input = int.Parse(Console.ReadLine().Trim());
+if(input < 0 || input > 100)
+{
+    Console.WriteLine("Score must be between 0 and 100.");
+    Console.ReadLine();
+    return;
+}
+if (input < 70)
+{
+    Console.WriteLine("Grade: C or below");
+    Console.ReadLine();
+}
+else if (input >= 70 && input < 80)
+{
+    Console.WriteLine("Grade: B");
+    Console.ReadLine();
+}
+else if (input >= 80 && input < 90)
+{
+    Console.WriteLine("Grade: A");
+    Console.ReadLine();
+}
+else
+{
+    Console.WriteLine("Grade: A+");
+    Console.ReadLine();
+}
