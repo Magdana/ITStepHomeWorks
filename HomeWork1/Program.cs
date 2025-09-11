@@ -99,3 +99,32 @@ Console.WriteLine($"Discount: {discount}, amount to pay {amountToPay}");
 Console.ReadLine();
 
 #endregion
+
+
+#region
+
+// 4. Day of the Week
+
+Console.Write("enter the number (1-7) : ");
+int numberOfDay = int.Parse(Console.ReadLine().Trim());
+if(numberOfDay < 1 || numberOfDay > 7)
+{
+    Console.WriteLine("Invalid day number");
+    Console.ReadLine();
+    return;
+}
+List<int> daysInNumbers = new List<int>()
+{
+    1, 2, 3, 4, 5, 6, 7
+};
+
+List<string> days = new List<string>()
+{
+  "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+};
+
+var dayIndex = daysInNumbers.FindIndex(d => d == numberOfDay);
+Console.WriteLine(days[dayIndex]);
+Console.ReadLine();
+
+#endregion
