@@ -107,7 +107,7 @@ Console.ReadLine();
 
 Console.Write("enter the number (1-7) : ");
 int numberOfDay = int.Parse(Console.ReadLine().Trim());
-if(numberOfDay < 1 || numberOfDay > 7)
+if (numberOfDay < 1 || numberOfDay > 7)
 {
     Console.WriteLine("Invalid day number");
     Console.ReadLine();
@@ -126,5 +126,38 @@ List<string> days = new List<string>()
 var dayIndex = daysInNumbers.FindIndex(d => d == numberOfDay);
 Console.WriteLine(days[dayIndex]);
 Console.ReadLine();
+
+#endregion
+
+
+#region
+
+// 5. Traffic Light System
+
+Console.Write("signal ('Red', 'Yellow', 'Green'): ");
+string signal = Console.ReadLine()?.Trim();
+
+if (string.IsNullOrWhiteSpace(signal) || (signal != "Red" && signal != "Yellow" && signal != "Green"))
+{
+    Console.WriteLine("Invalid signal");
+    Console.ReadLine();
+    return;
+}
+if (signal == "Red")
+{
+    Console.WriteLine("Stop!");
+    Console.ReadLine();
+}
+else if (signal == "Yellow")
+{
+    Console.WriteLine("Get Ready!");
+    Console.ReadLine();
+}
+else
+{
+    Console.WriteLine("Go!");
+    Console.ReadLine();
+}
+
 
 #endregion
