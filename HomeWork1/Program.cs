@@ -129,7 +129,6 @@ Console.ReadLine();
 
 #endregion
 
-
 #region
 
 // 5. Traffic Light System
@@ -159,5 +158,38 @@ else
     Console.ReadLine();
 }
 
+#endregion
 
+
+#region
+
+// 6. ATM Withdrawal Validation
+
+Console.WriteLine("ATM Withdrawal Validation");
+Console.WriteLine("-------------------------");
+Console.Write("Enter your balanse: ");
+int balance = int.Parse(Console.ReadLine()?.Trim());
+if (balance < 0)
+{
+    Console.WriteLine("Balance cannot be negative.");
+    Console.ReadLine();
+    return;
+}
+Console.Write("Enter the amount to withdraw: ");
+int withdrawAmount = int.Parse(Console.ReadLine().Trim());
+if (withdrawAmount <= 0)
+{
+    Console.WriteLine("Invalid withdrawal amount");
+    Console.ReadLine();
+    return;
+}
+if (withdrawAmount > balance)
+{
+    Console.WriteLine("Insufficient balance");
+    Console.ReadLine();
+    return;
+}
+balance -= withdrawAmount;
+Console.WriteLine($"Withdrawal successful! Remaining balance: {balance}");
+Console.ReadLine();
 #endregion
