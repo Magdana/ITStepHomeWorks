@@ -268,3 +268,29 @@ Console.WriteLine($"Result: {result}");
 Console.ReadLine();
 
 #endregion
+
+#region
+
+// 9. Voting Eligibility
+
+Console.WriteLine("Voting Eligibility");
+Console.WriteLine("------------------");
+Console.Write("Enter your age: ");
+int age = int.Parse(Console.ReadLine().Trim());
+if (age < 0)
+{
+    Console.WriteLine("Invalid age");
+    Console.ReadLine();
+    return;
+}
+else if (age >= 18)
+{
+    Console.WriteLine("Eligible to vote");
+    Console.ReadLine();
+}
+else
+{
+    Console.WriteLine("Not eligible to vote");
+    Console.ReadLine();
+}
+#endregion
