@@ -294,3 +294,51 @@ else
     Console.ReadLine();
 }
 #endregion
+
+#region
+
+// 10. Employee Bonus Calculation
+
+Console.WriteLine("Employee Bonus Calculation");
+Console.WriteLine("--------------------------");
+Console.Write("enter your role ('Manager', 'Developer', other): ");
+string role = Console.ReadLine()?.Trim();
+if (string.IsNullOrWhiteSpace(role) || (role != "Manager" && role != "Developer" && role != "other"))
+{
+    Console.WriteLine("Invalid role");
+    Console.ReadLine();
+    return;
+}
+Console.Write("Enter your salary: ");
+decimal salary = decimal.Parse(Console.ReadLine().Trim());
+
+if (salary < 0)
+{
+    Console.WriteLine("Salary cannot be negative.");
+    Console.ReadLine();
+    return;
+}
+decimal bonus;
+if (role == "Manager" && salary > 2500)
+{
+    bonus = salary * 0.15m;
+}
+else if (role == "Manager")
+{
+    bonus = salary * 0.10m;
+}
+else if (role == "Developer" && salary > 2000)
+{
+   bonus = salary * 0.12m;
+}
+else if (role == "Developer")
+{
+    bonus = salary * 0.08m;
+}
+else
+{
+    bonus = salary * 0.05m;
+}
+Console.WriteLine($"Bonus: {bonus}");
+Console.ReadLine();
+#endregion
