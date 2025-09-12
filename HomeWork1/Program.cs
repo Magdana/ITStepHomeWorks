@@ -193,3 +193,32 @@ balance -= withdrawAmount;
 Console.WriteLine($"Withdrawal successful! Remaining balance: {balance}");
 Console.ReadLine();
 #endregion
+
+#region
+
+// 7. Pass/Fail Result
+
+
+Console.WriteLine("Pass/Fail Result");
+Console.WriteLine("----------------");
+
+Console.Write(" enter your score (score 0–100): ");
+int score = int.Parse(Console.ReadLine().Trim());
+if (score < 0 || score > 100)
+{
+    Console.WriteLine("Score must be between 0 and 100.");
+    Console.ReadLine();
+    return;
+}
+if (score >= 50)
+{
+    Console.WriteLine("Pass");
+    Console.ReadLine();
+}
+else
+{
+    Console.WriteLine("Fail");
+    Console.ReadLine();
+}
+
+#endregion
