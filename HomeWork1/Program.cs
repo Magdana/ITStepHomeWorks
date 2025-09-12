@@ -222,3 +222,49 @@ else
 }
 
 #endregion
+
+#region
+
+// 8. Calculator Program
+
+Console.WriteLine("Calculator Program");
+Console.WriteLine("------------------");
+Console.Write("Enter first number: ");
+double num1 = double.Parse(Console.ReadLine().Trim());
+Console.Write("Enter second number: ");
+double num2 = double.Parse(Console.ReadLine().Trim());
+Console.Write("Enter an operator (+, -, *, /): ");
+string op = Console.ReadLine()?.Trim();
+double result;
+if (string.IsNullOrWhiteSpace(op) || (op != "+" && op != "-" && op != "*" && op != "/"))
+{
+    Console.WriteLine("Invalid operator");
+    Console.ReadLine();
+    return;
+}
+if (op == "+")
+{
+    result = num1 + num2;
+}
+else if (op == "-")
+{
+    result = num1 - num2;
+}
+else if (op == "*")
+{
+    result = num1 * num2;
+}
+else
+{
+    if (num2 == 0)
+    {
+        Console.WriteLine("Cannot divide by zero");
+        Console.ReadLine();
+        return;
+    }
+    result = num1 / num2;
+}
+Console.WriteLine($"Result: {result}");
+Console.ReadLine();
+
+#endregion
