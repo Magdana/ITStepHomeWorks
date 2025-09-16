@@ -151,7 +151,7 @@ for (int i = originalNumber.Length - 1; i >= 0; i--)
 {
     reversedNumber += originalNumber[i];
 }
-if(originalNumber == reversedNumber)
+if (originalNumber == reversedNumber)
 {
     Console.WriteLine($"{originalNumber} is a palindrome.");
 }
@@ -159,5 +159,32 @@ else
 {
     Console.WriteLine($"{originalNumber} is not a palindrome.");
 }
+
+#endregion
+
+
+#region
+
+// Fibonacci Sequence
+
+Console.Write("enter the number : ");
+int n = int.Parse(Console.ReadLine()?.Trim());
+int first = 0, second = 1, next;
+
+for(int i = 0; i < n; i++)
+{
+    if (i <= 1)
+    {
+        next = i;
+    }
+    else
+    {
+        next = first + second;
+        first = second;
+        second = next;
+    }
+    Console.WriteLine(next);
+}
+
 
 #endregion
