@@ -56,7 +56,7 @@ for (int i = 0; i <= 9; i++)
 
 //Reverse Numbers
 
-for (int i=10; i>=1; i--)
+for (int i = 10; i >= 1; i--)
 {
     Console.WriteLine(i);
 }
@@ -71,9 +71,9 @@ for (int i=10; i>=1; i--)
 
 int factorial = 1;
 Console.Write("enter the number : ");
-if(int.TryParse(Console.ReadLine()?.Trim(), out int num))
+if (int.TryParse(Console.ReadLine()?.Trim(), out int num))
 {
-    if(num ==0)
+    if (num == 0)
     {
         Console.WriteLine("Factorial of 0 = 1");
         return;
@@ -87,6 +87,19 @@ if(int.TryParse(Console.ReadLine()?.Trim(), out int num))
 else
 {
     Console.WriteLine("Invalid input. Please enter a valid integer.");
+}
+
+
+#endregion
+
+
+#region
+
+// Repeat Character
+
+for (int i = 1; i <= 10; i++)
+{
+    Console.Write("*");
 }
 
 
