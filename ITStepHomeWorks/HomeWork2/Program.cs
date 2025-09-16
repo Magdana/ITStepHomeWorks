@@ -104,3 +104,20 @@ for (int i = 1; i <= 10; i++)
 
 
 #endregion
+
+
+#region
+
+// While ციკლი – ჯამი სანამ არ გადავაჭარბებთ
+
+int total1 = 0;
+int number1 = 1;
+
+while (total1 < 50)
+{
+    total1 += number1;
+    number1++;
+}
+
+Console.WriteLine("Sum = " + total1);
+#endregion
