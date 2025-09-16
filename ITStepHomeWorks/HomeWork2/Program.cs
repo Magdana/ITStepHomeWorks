@@ -139,3 +139,25 @@ while (inputPassword != correctPassword);
 Console.WriteLine("Correct!");
 
 #endregion
+
+
+#region
+
+// Palindrome Number Check
+Console.Write("Enter a number: ");
+string originalNumber = Console.ReadLine()?.Trim();
+string reversedNumber = string.Empty;
+for (int i = originalNumber.Length - 1; i >= 0; i--)
+{
+    reversedNumber += originalNumber[i];
+}
+if(originalNumber == reversedNumber)
+{
+    Console.WriteLine($"{originalNumber} is a palindrome.");
+}
+else
+{
+    Console.WriteLine($"{originalNumber} is not a palindrome.");
+}
+
+#endregion
