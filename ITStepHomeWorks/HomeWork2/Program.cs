@@ -50,3 +50,16 @@ for (int i = 0; i <= 9; i++)
     Console.WriteLine($"{number} x {i} = {result}");
 }
 #endregion
+
+
+#region
+
+//Reverse Numbers
+
+for (int i=10; i>=1; i--)
+{
+    Console.WriteLine(i);
+}
+
+
+#endregion
