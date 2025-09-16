@@ -1,6 +1,7 @@
 ﻿#region
 
 //Print Numbers 1–10
+
 for (int i = 1; i <= 10; i++)
 {
     Console.WriteLine(i);
@@ -11,6 +12,7 @@ for (int i = 1; i <= 10; i++)
 #region
 
 // Sum of Numbers 1–100
+
 int sum = 0;
 for (int i = 1; i <= 100; i++)
 {
@@ -33,4 +35,18 @@ for (int i = 1; i < 20; i++)
     }
 }
 
+#endregion
+
+
+#region
+
+// Multiplication Table
+
+Console.Write("enter the number: ");
+int number = int.Parse(Console.ReadLine()?.Trim());
+for (int i = 0; i <= 9; i++)
+{
+    int result = number * i;
+    Console.WriteLine($"{number} x {i} = {result}");
+}
 #endregion
