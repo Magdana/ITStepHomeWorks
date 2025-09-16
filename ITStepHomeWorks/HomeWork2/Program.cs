@@ -63,3 +63,31 @@ for (int i=10; i>=1; i--)
 
 
 #endregion
+
+
+#region
+
+// Factorial
+
+int factorial = 1;
+Console.Write("enter the number : ");
+if(int.TryParse(Console.ReadLine()?.Trim(), out int num))
+{
+    if(num ==0)
+    {
+        Console.WriteLine("Factorial of 0 = 1");
+        return;
+    }
+    for (int i = 1; i <= num; i++)
+    {
+        factorial *= i;
+    }
+    Console.WriteLine($"Factorial of {num} = {factorial}");
+}
+else
+{
+    Console.WriteLine("Invalid input. Please enter a valid integer.");
+}
+
+
+#endregion
