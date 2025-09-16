@@ -120,4 +120,22 @@ while (total1 < 50)
 }
 
 Console.WriteLine("Sum = " + total1);
+
+#endregion
+
+
+#region
+
+// Do-While ციკლი – პაროლი
+
+string correctPassword = "1234";
+string inputPassword = string.Empty;
+do
+{
+    Console.Write("Enter password: ");
+    inputPassword = Console.ReadLine()?.Trim();
+}
+while (inputPassword != correctPassword);
+Console.WriteLine("Correct!");
+
 #endregion
