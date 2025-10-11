@@ -2,6 +2,7 @@
 using HomeWork10.Task2;
 using HomeWork10.Task3;
 using HomeWork10.Task4;
+using HomeWork10.Task5;
 using System.Reflection.Metadata;
 
 
@@ -39,3 +40,10 @@ IPaymentProcessor paymentProcessor = choice switch
     _ => throw new ArgumentException("Invalid payment method.")
 };
 paymentProcessor.ProcessPayment(100.00m);
+
+
+//Task 5: Interface with Default Implementation (C# 8+)
+
+ConsoleLogger consoleLogger = new ConsoleLogger();
+consoleLogger.Log("This is a log message.");
+consoleLogger.LogWithTime("This is a log message with time");
