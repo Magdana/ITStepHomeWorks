@@ -3,7 +3,7 @@ using HomeWork10.Task2;
 using HomeWork10.Task3;
 using HomeWork10.Task4;
 using HomeWork10.Task5;
-using System.Reflection.Metadata;
+using HomeWork10.Task6;
 
 
 
@@ -47,3 +47,15 @@ paymentProcessor.ProcessPayment(100.00m);
 ConsoleLogger consoleLogger = new ConsoleLogger();
 consoleLogger.Log("This is a log message.");
 consoleLogger.LogWithTime("This is a log message with time");
+
+
+//Task 6: Polymorphism in Action
+
+List<IShape> shapes = new List<IShape>();
+shapes.Add(new Circle(5));
+shapes.Add(new Rectangle(4, 6));
+
+foreach (var shape in shapes)
+{
+    Console.WriteLine($"Area of {shape.GetType().Name}: {shape.GetArea()}");
+}
