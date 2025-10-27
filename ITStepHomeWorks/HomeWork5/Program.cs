@@ -92,34 +92,34 @@ foreach (int item in arrCopy)
 }
 
 
-//Second Largest Number
+////Second Largest Number
 
-int[] arr9 = [20, 30, 45, 15, 98, 12, 4, 88, 120];
-int max = arr9.Max();
-int[] secondArr = arr9.Where(x => x != max).ToArray();
-int secondMax = secondArr.Max();
-Console.WriteLine(secondMax);
-
-
-
-//Frequency of Elements
-
-int[] arr9 = [20, 20, 20, 30, 45, 45, 15, 98, 12, 4, 4, 4, 4, 4, 4, 4, 4, 4, 88, 120];
-int[] dist = arr9.DistinctBy(i => i).ToArray();
+//int[] arr9 = [20, 30, 45, 15, 98, 12, 4, 88, 120];
+//int max = arr9.Max();
+//int[] secondArr = arr9.Where(x => x != max).ToArray();
+//int secondMax = secondArr.Max();
+//Console.WriteLine(secondMax);
 
 
-for (int i = 0; i < dist.Length; i++)
-{
-    List<int> list = new List<int>();
-    for (int j = 0; j < arr9.Length; j++)
-    {
-        if (arr9[j] == dist[i])
-        {
-            list.Add(j);
-        }
-    }
-    Console.WriteLine($"count of: {dist[i]} is: " + list.Count());
-}
+
+////Frequency of Elements
+
+//int[] arr9 = [20, 20, 20, 30, 45, 45, 15, 98, 12, 4, 4, 4, 4, 4, 4, 4, 4, 4, 88, 120];
+//int[] dist = arr9.DistinctBy(i => i).ToArray();
+
+
+//for (int i = 0; i < dist.Length; i++)
+//{
+//    List<int> list = new List<int>();
+//    for (int j = 0; j < arr9.Length; j++)
+//    {
+//        if (arr9[j] == dist[i])
+//        {
+//            list.Add(j);
+//        }
+//    }
+//    Console.WriteLine($"count of: {dist[i]} is: " + list.Count());
+//}
 
 
 List<int> numbers = GetNumbers();
